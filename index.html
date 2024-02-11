@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year 2024</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="process.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="content">
+      <p id="header">HAPPY NEW YEAR 2024</p>
+    </div>
+
+    <div class="firework"></div>
+
+    <div class="btn">
+      <button type="button" class="btn-happy" id="btn" onclick="saveAudioState()">Click me</button>
+    </div>
+
+    <div class="img">
+      <img src="dragon.png" alt="Rồng đón Tết" id="img-dragon">
+      <img src="flower1.png" alt="Hoa đào" id="img-flower1">
+      <img src="flower6.png" alt="Hoa mai" id="img-flower6">
+      <img src="goldbar.png" alt="Thỏi vảng" id="goldbar">
+      <img src="goldbar2.png" alt="Thỏi vảng" id="goldbar2">
+      <img src="goldbar3.png" alt="Thỏi vảng" id="goldbar3">
+      <img src="freeluckymoney.png" alt="" id="treeluckymoney">
+      <img src="bag1.png" alt="" id="luckeymoney1">
+      <img src="bag2.png" alt="" id="luckeymoney2">
+      <img src="couple.png" alt="" id="couple">
+    </div>
+
+    <div class="snowflakes" aria-hidden="true">
+      <div class="snowflake">
+          <img src="flower2.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower3.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower4.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower2.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower5.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower4.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower5.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower3.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower4.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower5.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower3.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower4.png" alt="" width="30px">
+      </div>
+      <div class="snowflake">
+          <img src="flower5.png" alt="" width="30px">
+      </div>
+    </div>
+
+    <div class="file-audio">
+      <audio autoplay class="audio" loop preload="auto" id="myAudio">
+        <source src="TetDenThatRoi-UNI5-5380640.mp3">
+      </audio>
+    </div>
+    <script>
+      var movePage = document.getElementById("btn");
+
+      if (movePage) {
+          movePage.addEventListener('click', function () {
+              window.location.href = "./dragon.html";
+          });
+      } else {
+          alert("Trang không tồn tại");
+      }
+
+      function saveAudioState() {
+        var audio = document.getElementById("myAudio");
+        sessionStorage.setItem('audioCurrentTime', audio.currentTime);
+      }
+    </script>
+  </div>
+</body>
+</html>
